@@ -18,8 +18,8 @@ export default function HomePage() {
       <FeaturesSection/>
       <AboutSection />
       <LatestCoursesSection />
-  
-      <TeachersSection />
+      <StatsStrip />
+     
       <TestimonialsSection />
       <UpcomingEventsSection />
       <ContactSection />

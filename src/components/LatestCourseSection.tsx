@@ -66,6 +66,13 @@ const courses: Course[] = [
     image: "/images/projects/web8.png",
   },
   {
+    id: 14,
+    category: "portals",
+    title: "Clean Simple Portal Design",
+    price: 450,
+    image: "/images/projects/web13.png",
+  },
+  {
     id: 9,
     category: "portals",
     title: "Client Access Portal — Streamlined, Secure, and Scalable",
@@ -79,6 +86,13 @@ const courses: Course[] = [
     price: 450,
     image: "/images/projects/web10.png",
   },
+   {
+    id: 13,
+    category: "portals",
+    title: "Control Everything in One Place",
+    price: 450,
+    image: "/images/projects/web12.webp",
+  },
   {
     id: 11,
     category: "portals",
@@ -86,6 +100,15 @@ const courses: Course[] = [
     price: 450,
     image: "/images/projects/web11.png",
   },
+    {
+    id: 12,
+    category: "portals",
+    title: "Streamlined, Secure, and Scalable Portal",
+    price: 640,
+    image: "/images/projects/web12.jpg",
+  },
+ 
+  
 ];
 
 
