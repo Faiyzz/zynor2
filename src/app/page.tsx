@@ -18,7 +18,7 @@ export default function HomePage() {
       <FeaturesSection/>
       <AboutSection />
       <LatestCoursesSection />
-      <StatsStrip />
+  
       <TeachersSection />
       <TestimonialsSection />
       <UpcomingEventsSection />
