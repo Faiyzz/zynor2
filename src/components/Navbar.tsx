@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <h1 className="text-2xl font-bold tracking-tight text-white">
+              <h1 className="text-3xl font-bold tracking-tight text-white">
                 Zynor.
               </h1>
             </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <Link
                 key={label}
                 href={href}
-                className="text-sm font-medium text-white hover:text-gray-200 transition-colors"
+                className="text-m font-medium text-white hover:text-gray-200 transition-colors"
               >
                 {label}
               </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
             <Link
               href="#contact"
-              className="inline-flex items-center rounded-full border border-transparent px-4 py-2 text-sm font-semibold text-[#6c1898] bg-white shadow-sm hover:opacity-90 transition"
+              className="inline-flex items-center rounded-full border border-transparent px-4 py-2 text-m font-semibold text-[#6c1898] bg-white shadow-sm hover:opacity-90 transition"
               style={{
                 boxShadow: "0 12px 24px rgba(255,255,255,0.2)",
               }}
