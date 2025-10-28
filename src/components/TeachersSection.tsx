@@ -24,11 +24,7 @@ const teachers: Teacher[] = [
     role: "Full Stack Master",
     img: "/teachers/david.jpg",
   },
-  {
-    name: "Stella Blair",
-    role: "Digital Animator",
-    img: "/teachers/stella.jpg",
-  },
+ 
 ];
 
 export default function TeachersSection() {

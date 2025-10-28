@@ -7,9 +7,9 @@ const PURPLE = "#6c1898";
 
 // replace with your real hero images
 const slideBgImages = [
-  "/images/slider.jpg",
-  "/images/slider.jpg",
-  "/images/slider.jpg",
+  "/images/slider1.avif",
+  "/images/slider2.jpg",
+  "/images/slider3.jpeg",
 ];
 
 type Slide = {
@@ -169,15 +169,7 @@ export default function HeroSlider() {
                             {slide.primaryCta}
                           </button>
 
-                          {/* watch/play CTA */}
-                          <button className="inline-flex items-center gap-3 text-white hover:opacity-90 active:scale-[0.98] transition">
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 shadow-[0_16px_28px_rgba(0,0,0,0.5)]">
-                              <Play className="h-4 w-4 fill-gray-900 text-gray-900" />
-                            </span>
-                            <span className="text-left text-[13px] font-medium leading-tight">
-                              {slide.secondaryCta}
-                            </span>
-                          </button>
+                         
                         </div>
 
                         {/* dots */}

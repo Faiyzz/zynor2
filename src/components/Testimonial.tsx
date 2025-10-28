@@ -16,7 +16,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quoteLines: [
-      "\"Zynor delivered exceptional results for our project.",
+      '"Zynor delivered exceptional results for our project.',
       "Their team's expertise and professionalism exceeded our expectations.",
       "We couldn't be happier with the final product!\"",
     ],
@@ -27,11 +27,11 @@ const testimonials: Testimonial[] = [
   },
   {
     quoteLines: [
-      "\"Working with Zynor was an absolute pleasure. Professional, efficient, and innovative.\"",
+      '"Working with Zynor was an absolute pleasure. Professional, efficient, and innovative."',
       "I'd 100% recommend them to anyone looking for quality software development.",
     ],
     role: "CTO, Digital Solutions",
-    name: "Sarah Khan",
+    name: "Amjad Khan",
     avatar:
       "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80",
   },
@@ -39,7 +39,6 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsSection() {
   const [index, setIndex] = useState(0);
-
   const current = testimonials[index];
 
   const prev = () => {
@@ -53,7 +52,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
-      {/* LIGHT BACK LAYER - hidden on mobile */}
+      {/* LIGHT BACK LAYER - keep it (desktop only) */}
       <div
         className={`
           hidden md:flex
@@ -70,11 +69,11 @@ export default function TestimonialsSection() {
           backgroundColor: "rgba(108,24,152,0.07)", // translucent accent tint
         }}
       >
-        {/* we keep an empty spacer div same width as the purple card so text starts to the right of it */}
-        <div className="w-[620px] min-h-[460px] shrink-0" />
+        {/* ⬇⬇ THIS WAS w-[620px] ... we make it smaller so the text shifts left */}
+        <div className="w-[480px] min-h-[460px] shrink-0" />
 
-        {/* RIGHT TEXT CONTENT */}
-        <div className="max-w-xl pl-16 lg:pl-24">
+        {/* RIGHT TEXT CONTENT in desktop bg layer */}
+        <div className="max-w-xl pl-8 lg:pl-12 pt-30">
           <p
             className="text-[13px] font-semibold tracking-wide uppercase mb-4"
             style={{ color: ACCENT }}
@@ -87,9 +86,9 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-[15px] leading-relaxed text-[#4b4b4b] mb-8">
-            Our clients trust us to deliver exceptional software solutions. 
-            From startups to enterprises, we've helped businesses transform 
-            their ideas into successful digital products.
+            Our clients trust us to deliver exceptional software solutions.
+            From startups to enterprises, we&apos;ve helped businesses
+            transform their ideas into successful digital products.
           </p>
         </div>
       </div>
@@ -98,9 +97,13 @@ export default function TestimonialsSection() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-10 flex flex-col md:flex-row items-start gap-8 md:gap-10">
         {/* LEFT PURPLE CARD */}
         <div
-          className="relative w-full md:w-[620px] max-w-[620px] min-h-[300px] sm:min-h-[320px] md:min-h-[350px] rounded-2xl md:rounded-[24px] lg:rounded-[28px] xl:rounded-[32px] px-6 sm:px-8 md:px-10 lg:px-12 py-10 sm:py-12 md:py-14 shadow-lg text-white"
-          style={{ backgroundColor: ACCENT }}
-        >
+  className="relative w-full md:w-[620px] max-w-[620px] min-h-[300px] sm:min-h-[320px] md:min-h-[350px] 
+  rounded-2xl md:rounded-[24px] lg:rounded-[28px] xl:rounded-[32px] 
+  px-6 sm:px-8 md:px-10 lg:px-12 py-10 sm:py-12 md:py-24 
+  shadow-lg text-white md:ml-50"
+  style={{ backgroundColor: ACCENT }}
+>
+
           {/* quote text */}
           <div className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-relaxed italic font-light text-white/90 space-y-3 md:space-y-4">
             {current.quoteLines.map((line, i) => (
@@ -111,7 +114,6 @@ export default function TestimonialsSection() {
           {/* avatar + name/role */}
           <div className="flex items-center gap-3 md:gap-4 lg:gap-5 mt-8 md:mt-10">
             <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden ring-2 ring-white/30 shrink-0">
-              {/* avatar image */}
               <Image
                 src={current.avatar}
                 alt={current.name}
@@ -148,7 +150,7 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* RIGHT TEXT CONTENT (mobile fallback below card) */}
+        {/* MOBILE TEXT (under card). desktop still uses bg-layer text */}
         <div className="md:hidden w-full mt-6">
           <p
             className="text-[12px] font-semibold tracking-wide uppercase mb-3"
@@ -162,8 +164,8 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-[14px] sm:text-[15px] leading-relaxed text-[#4b4b4b]">
-            Our clients trust us to deliver exceptional software solutions. 
-            From startups to enterprises, we've helped businesses transform 
+            Our clients trust us to deliver exceptional software solutions.
+            From startups to enterprises, we&apos;ve helped businesses transform
             their ideas into successful digital products.
           </p>
         </div>

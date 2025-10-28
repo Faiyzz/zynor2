@@ -17,10 +17,10 @@ export default function StatsStrip() {
 
         {/* stats */}
         <div className="flex flex-wrap justify-center md:justify-between w-full max-w-6xl z-10 gap-8 md:gap-4">
-          <StatBlock value="150+" label="Happy Students" />
-          <StatBlock value="804+" label="Course Hours" />
-          <StatBlock value="50+" label="Employed Students" />
-          <StatBlock value="15+" label="Years Experience" />
+          <StatBlock value="150+" label="Clients" />
+          <StatBlock value="24+" label="Projects Completed" />
+          <StatBlock value="10+" label="Employees" />
+          <StatBlock value="7+" label="Years Experience" />
         </div>
       </div>
     </section>

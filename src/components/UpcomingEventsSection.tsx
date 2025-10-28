@@ -7,34 +7,34 @@ type EventItem = {
   title: string;
   date: string;
   duration: string;
-  price: string;
+ 
   img: string;
 };
 
 const events: EventItem[] = [
   {
-    tag: "WEB DESIGN",
-    title: "UI Best Practices",
+    tag: "CRM",
+    title: "Customer Management System",
     date: "16 Feb 2036",
     duration: "22 Hours",
-    price: "$120",
-    img: "/events/event1.jpg",
+    
+    img: "/images/projects/web10.png",
   },
   {
-    tag: "FRONT END",
-    title: "New Design Trend",
+    tag: "Saas Product",
+    title: "Charm ",
     date: "24 Feb 2036",
     duration: "30 Hours",
-    price: "$320",
-    img: "/events/event2.jpg",
+
+   img: "/images/projects/web9.png",
   },
   {
     tag: "FULL STACK",
-    title: "Web Programming",
+    title: "Edenz Consultancy Portal",
     date: "12 Mar 2036",
     duration: "48 Hours",
-    price: "$440",
-    img: "/events/event3.jpg",
+   
+   img: "/images/projects/web11.png",
   },
 ];
 
@@ -106,15 +106,7 @@ export default function UpcomingEventsSection() {
                     </div>
                   </div>
 
-                  {/* price */}
-                  <div className="text-sm text-[#1a1a1a] min-w-[120px] md:min-w-[140px]">
-                    <div className="text-[12px] md:text-[13px] text-[#555] font-medium">
-                      Price:
-                    </div>
-                    <div className="text-[13px] md:text-[14px] font-semibold text-[#6c1898]">
-                      {ev.price}
-                    </div>
-                  </div>
+                 
                 </div>
 
                 {/* arrow bubble on right */}

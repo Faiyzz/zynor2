@@ -4,12 +4,12 @@ import { useState } from "react";
 
 const ACCENT = "#6c1898";
 
-type CourseCategory = "Show All" | "Webdesign" | "Development" | "Wordpress";
+type CourseCategory = "Webdesign" | "Funnels" | "Portals";
 
 type Course = {
   id: number;
-  category: "webdesign" | "development" | "wordpress";
-  instructor: string;
+  category: "webdesign" | "funnels" | "portals";
+  
   title: string;
   price: number;
   image: string;
@@ -18,75 +18,92 @@ type Course = {
 const courses: Course[] = [
   {
     id: 1,
-    category: "webdesign",
-    instructor: "Stella Blair",
-    title: "Learn Web Design",
+    category: "funnels",
+    title: "The Ultimate Conversion Funnel — Turn Visitors Into Clients",
     price: 160,
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    image: "/images/projects/web1.png",
   },
   {
     id: 2,
-    category: "development",
-    instructor: "Cindy Walker",
-    title: "Web Development Tips",
+    category: "webdesign",
+    title: "Award-Winning Portfolio Site — Where Creativity Meets Precision",
     price: 340,
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: 3,
-    category: "wordpress",
-    instructor: "David Hutson",
-    title: "Latest Web Trends",
-    price: 640,
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+    image: "/images/projects/web2.png",
   },
   {
     id: 4,
-    category: "development",
-    instructor: "Stella Blair",
-    title: "Online Learning Steps",
+    category: "webdesign",
+    title: "Modern Business Website — Designed for Impact and Clarity",
     price: 450,
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    image: "/images/projects/web4.png",
   },
   {
     id: 5,
-    category: "wordpress",
-    instructor: "Sophia Rose",
-    title: "Be a WordPress Master",
+    category: "webdesign",
+    title: "Nextjs Experience — A Fully Custom, High-Speed Site Build",
     price: 320,
-    image:
-      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=900&q=80",
+    image: "/images/projects/web5.png",
   },
   {
     id: 6,
     category: "webdesign",
-    instructor: "David Hutson",
-    title: "Full Stack Developer",
+    title: "Full-Stack Brand Presence — Seamless UI, Built to Convert",
     price: 240,
-    image:
-      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=900&q=80",
+    image: "/images/projects/web6.png",
+  },
+  {
+    id: 7,
+    category: "webdesign",
+    title: "Next-Gen Web Interface — Minimal, Fast, and Immersive",
+    price: 160,
+    image: "/images/projects/web7.png",
+  },
+  {
+    id: 8,
+    category: "webdesign",
+    title: "Elegant Web Redesign — Elevating Digital First Impressions",
+    price: 340,
+    image: "/images/projects/web8.png",
+  },
+  {
+    id: 9,
+    category: "portals",
+    title: "Client Access Portal — Streamlined, Secure, and Scalable",
+    price: 640,
+    image: "/images/projects/web9.png",
+  },
+  {
+    id: 10,
+    category: "portals",
+    title: "Business Management Dashboard — Control Everything in One Place",
+    price: 450,
+    image: "/images/projects/web10.png",
+  },
+  {
+    id: 11,
+    category: "portals",
+    title: "Learning Portal — Empower Teams Through Smart Education Systems",
+    price: 450,
+    image: "/images/projects/web11.png",
   },
 ];
 
+
 const filterTabs: CourseCategory[] = [
-  "Show All",
+
   "Webdesign",
-  "Development",
-  "Wordpress",
+  "Funnels",
+  "Portals",
 ];
 
 export default function LatestCoursesSection() {
-  const [active, setActive] = useState<CourseCategory>("Show All");
+  const [active, setActive] = useState<CourseCategory>("Webdesign");
 
   const filtered = courses.filter((c) => {
-    if (active === "Show All") return true;
+    
     if (active === "Webdesign") return c.category === "webdesign";
-    if (active === "Development") return c.category === "development";
-    if (active === "Wordpress") return c.category === "wordpress";
+    if (active === "Funnels") return c.category === "funnels";
+    if (active === "Portals") return c.category === "portals";
     return true;
   });
 
@@ -161,7 +178,7 @@ function CourseCard({ course }: { course: Course }) {
 
       {/* bottom content */}
       <div className="px-4 md:px-5 py-4 md:py-5 text-left">
-        <div className="text-[11px] md:text-[12px] text-[#6b6b6b]">{course.instructor}</div>
+        
         <div className="text-[14px] md:text-[15px] lg:text-[16px] font-semibold text-[#1a1a1a] leading-snug mt-1">
           {course.title}
         </div>
