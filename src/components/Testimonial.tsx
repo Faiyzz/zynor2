@@ -53,27 +53,24 @@ export default function TestimonialsSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       {/* LIGHT BACK LAYER - keep it (desktop only) */}
-      <div
-        className={`
-          hidden md:flex
-          absolute top-1/2 -translate-y-1/2 right-0 z-0
-          shadow-sm
-          py-10 md:py-16 lg:py-20
-          pr-6 md:pr-10 lg:pr-16
-          pl-6 md:pl-10 lg:pl-16
-          max-w-[1300px] w-[90vw]
-          rounded-l-[60px] md:rounded-l-[120px] lg:rounded-l-[999px] rounded-r-none
-          items-start
-        `}
-        style={{
-          backgroundColor: "rgba(108,24,152,0.07)", // translucent accent tint
-        }}
-      >
-        {/* ⬇⬇ THIS WAS w-[620px] ... we make it smaller so the text shifts left */}
-        <div className="w-[480px] min-h-[460px] shrink-0" />
-
-        {/* RIGHT TEXT CONTENT in desktop bg layer */}
-        <div className="max-w-xl pl-8 lg:pl-12 pt-30">
+  {/* DESKTOP LIGHT BACK LAYER (lg+) */}
+<div
+  className={`
+    hidden lg:flex
+    absolute top-1/2 -translate-y-1/2 right-0 z-0
+    shadow-sm
+    py-16 lg:py-20
+    pr-10 lg:pr-16
+    pl-6 xl:pl-20  /* was pl-10 lg:pl-16 */
+    max-w-[1300px] w-[90vw]
+    rounded-l-[120px] lg:rounded-l-[999px] rounded-r-none
+    items-start
+  `}
+  style={{ backgroundColor: "rgba(108,24,152,0.07)" }}
+>
+  {/* spacer adjusted */}
+  <div className="w-[560px] xl:w-[620px] min-h-[460px] shrink-0" />
+  <div className="max-w-xl pl-8 xl:pl-12">
           <p
             className="text-[13px] font-semibold tracking-wide uppercase mb-4"
             style={{ color: ACCENT }}
@@ -96,14 +93,13 @@ export default function TestimonialsSection() {
       {/* FOREGROUND CONTENT ROW */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-10 flex flex-col md:flex-row items-start gap-8 md:gap-10">
         {/* LEFT PURPLE CARD */}
-        <div
-  className="relative w-full md:w-[620px] max-w-[620px] min-h-[300px] sm:min-h-[320px] md:min-h-[350px] 
+   <div
+  className="relative w-full md:w-[560px] xl:w-[620px] max-w-[620px] min-h-[300px] sm:min-h-[320px] md:min-h-[350px] 
   rounded-2xl md:rounded-[24px] lg:rounded-[28px] xl:rounded-[32px] 
   px-6 sm:px-8 md:px-10 lg:px-12 py-10 sm:py-12 md:py-24 
-  shadow-lg text-white md:ml-50"
+  shadow-lg text-white md:ml-0 xl:ml-10"
   style={{ backgroundColor: ACCENT }}
 >
-
           {/* quote text */}
           <div className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-relaxed italic font-light text-white/90 space-y-3 md:space-y-4">
             {current.quoteLines.map((line, i) => (
