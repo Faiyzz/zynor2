@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   publisher: siteName,
   applicationName: siteName,
 
-  // --- Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,18 +49,16 @@ export const metadata: Metadata = {
     ],
   },
 
-  // --- Twitter Card
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
     images: ["/logo.png"],
-    creator: "@zynor_ai", // replace if you have real handle
+    creator: "@zynor_ai",
   },
 
-  // --- Icons
   icons: {
-    icon: "/favicon.ico", // from app/
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/logo.png",
     other: [
@@ -72,7 +69,6 @@ export const metadata: Metadata = {
     ],
   },
 
-  // --- Robots / SEO directives
   robots: {
     index: true,
     follow: true,
@@ -87,9 +83,7 @@ export const metadata: Metadata = {
     },
   },
 
-  // --- Manifest (optional)
   manifest: "/site.webmanifest",
-
   category: "technology",
 };
 
@@ -100,6 +94,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* 👇 Import Spline viewer once globally */}
+        
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.10.98/build/spline-viewer.js"
+        ></script>
+      </head>
+
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>
